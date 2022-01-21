@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .sidebar {
   position: sticky;
   top: 0;
@@ -6,7 +7,7 @@
   .sidebar #sidebar_input {
     display: none; }
     .sidebar #sidebar_input:checked ~ .sidebar_content {
-      display: block; }
+      display: flex; }
     .sidebar #sidebar_input:checked ~ .sidebar_toggle {
       left: 205px; }
     .sidebar #sidebar_input:checked ~ .sidebar_toggle .sidebar_toggle__open {
@@ -85,14 +86,81 @@
   100% {
     transform: rotate(360deg); } }
 
+@font-face {
+  font-family: "Noto Sans Symbols 2";
+  src: url(/font/NotoSansSymbols2-Regular.ttf); }
+
+.five_star_rating_content {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%; }
+
+.five_star_rating {
+  position: relative;
+  display: flex;
+  margin: 10px 0;
+  flex-direction: row-reverse;
+  top: 4px; }
+  .five_star_rating input {
+    position: relative;
+    width: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    overflow: hidden; }
+    .five_star_rating input::before {
+      content: "🟊";
+      font-family: "Noto Sans Symbols 2";
+      position: absolute;
+      font-size: 40px;
+      left: 4px;
+      color: #010303;
+      transition: 0.5s; }
+    .five_star_rating input:nth-child(2n + 1)::before {
+      right: 4px;
+      left: initial; }
+    .five_star_rating input:hover ~ ::before, .five_star_rating input:hover::before,
+    .five_star_rating input:checked ~ ::before, .five_star_rating input:checked::before {
+      color: #63c1f8; }
+
+.five_star_rating__title {
+  max-width: 200px;
+  color: #010303;
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-align: right;
+  padding: 0 20px 0 0; }
+
 /*
-Delete code this down
+Remove code below this comment
 */
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; }
+
+body {
   background: #000000;
   color: #f8f5f4; }
+
+header {
+  display: block;
+  text-align: center;
+  margin: 5px 0 30px 0; }
+  header h1 {
+    margin: 10px 0 14px 0;
+    font-weight: bolder;
+    letter-spacing: 3px; }
+  header h2 {
+    font-size: 18px; }
+  header a {
+    color: yellow; }
 
 main {
   display: block;
@@ -107,6 +175,13 @@ section {
   width: 100%;
   flex-direction: column;
   align-items: center; }
+  section h2 {
+    color: #63c1f8; }
+
+.content {
+  width: 100%;
+  height: 100%;
+  background: #ececec; }
 
 .wrap {
   display: flex;

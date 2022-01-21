@@ -8,7 +8,7 @@
     display: none;
 
     &:checked ~ .sidebar_content {
-      display: block;
+      display: flex;
     }
 
     &:checked ~ .sidebar_toggle {

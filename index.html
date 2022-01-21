@@ -21,7 +21,17 @@
         </label>
     </div>
 
+    <header>
+        <h1>dulivoCSS</h1>
+        <h2>
+            full source code in this
+            <a href="https://github.com/ldulivo/dulivoCSS" target="_blank" rel="noopener noreferrer">Link</a>
+        </h2>
+    </header>
+
     <main id="main_content">
+
+        <!-- Sectopm: Water animation -->
         <section id="water_animation" name="Water animation">
             <h2>Water animation</h2>
             
@@ -85,12 +95,134 @@
             </div>
         </section> <!-- end section -->
 
+        <!-- Sectopm: Blot animation -->
         <section id="blot_animation" name="Blot animation">
-            <div class="w500">
-                <h2>Blot animation</h2>
-                <div class="blot_animation"></div>
+            <h2>Blot animation</h2>
+
+            <div class="wrap">
+                <div class="w500 flex-wrap">
+                    <h3>View effect</h3>
+                    <div class="blot_animation border"></div>
+                </div>
+
+                <div class="w500 flex-wrap code">
+                    <h3>Code</h3>
+<pre class="border">
+.blot_animation {
+    width: 100%;
+    height: 100%;
+    background-image: url("../svg/bubble_flow.svg");
+    background-repeat: no-repeat;
+    }
+</pre>
+                </div>
+
+            </div>
+
+        </section> <!-- end section -->
+        
+        <!-- Sectopm: Five star rating -->
+        <section id="five_star_rating" name="Five star rating">
+            <h2>Five star rating</h2>
+            
+            <div class="wrap">
+                <div class="w500 flex-wrap">
+                    <h3>View effect</h3>
+                    <div class="content border wrap">
+
+                        <div class="five_star_rating_content">
+                            <div class="five_star_rating__title">Hotel</div>
+                            <div class="five_star_rating">
+                                <input type="radio" name="html1" id="">
+                                <input type="radio" name="html1" id="">
+                                <input type="radio" name="html1" id="">
+                                <input type="radio" name="html1" id="">
+                                <input type="radio" name="html1" id="">
+                                <input type="radio" name="html1" id="">
+                                <input type="radio" name="html1" id="">
+                                <input type="radio" name="html1" id="">
+                                <input type="radio" name="html1" id="">
+                                <input type="radio" name="html1" id="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="w500 flex-wrap code">
+                    <h3>Code</h3>
+<pre class="border">
+@font-face {
+    font-family: "Noto Sans Symbols 2";
+    src: url(/font/NotoSansSymbols2-Regular.ttf);
+    }
+
+.five_star_rating_content {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    }
+    
+.five_star_rating {
+    //width: 100%;
+    //height: 100%;
+    position: relative;
+    display: flex;
+    margin: 10px 0;
+    flex-direction: row-reverse;
+    top: 4px;
+    
+    input {
+        position: relative;
+        width: 20px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        -webkit-appearance: none;
+        appearance: none;
+        overflow: hidden;
+    
+        &::before {
+            content: "🟊";
+            font-family: "Noto Sans Symbols 2";
+            position: absolute;
+            font-size: 40px;
+            left: 4px;
+            color: #010303;
+            transition: 0.5s;
+        }
+    
+        &:nth-child(2n + 1)::before {
+            right: 4px;
+            left: initial;
+        }
+    
+        &:hover ~ ::before,
+        &:hover::before,
+        &:checked ~ ::before,
+        &:checked::before {
+            color: #63c1f8;
+        }
+    }
+    }
+.five_star_rating__title {
+    max-width: 200px;
+    color: #010303;
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-align: right;
+    padding: 0 20px 0 0;
+    }      
+</pre>
+                </div>
+
             </div>
         </section> <!-- end section -->
+
     </main>
 
     
