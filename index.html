@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+    <div class="sidebar">
+        <input type="checkbox" id="sidebar_input">
+
+        <div id="sidebar_content" class="sidebar_content">
+            <!-- Content of menu -->
+        </div>
+
+        <label class="sidebar_toggle" type="button" for="sidebar_input">
+            <img class="sidebar_toggle__close"  src="/assets/svg/arrow_left.svg">
+            <img class="sidebar_toggle__open" src="/assets/svg/arrow_right.svg">
+        </label>
+    </div>
+
+    <main id="main_content">
+        <section id="water_animation" name="Water animation">
+            <h2>Water animation</h2>
+            
+            <div class="wrap">
+                <div class="w500 flex-wrap">
+                    <h3>View effect</h3>
+                    <div class="water_animation border"></div>
+                </div>
+
+                <div class="w500 flex-wrap code">
+                    <h3>Code</h3>
+<pre class="border">
+.water_animation {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #80c5de;
+    box-shadow: inset 0 0 50px #1c637c;
+    //clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    overflow: hidden;
+    
+    &::before {
+        content: "";
+        width: 200%;
+        height: 200%;
+        background-color: #ececec;
+        position: absolute;
+        top: -150%;
+        left: -50%;
+        border-radius: 40%;
+        animation: water_anim 12s linear infinite;
+    }
+    
+    &::after {
+        content: "";
+        width: 204%;
+        height: 204%;
+        background-color: #ececec80;
+        position: absolute;
+        top: -150%;
+        left: -52%;
+        border-radius: 40%;
+        animation: water_anim 12s linear infinite;
+        animation-delay: 0.5s;
+    }
+    }
+    
+    @keyframes water_anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    }
+    
+</pre>
+                </div>
+
+            </div>
+        </section> <!-- end section -->
+
+        <section id="blot_animation" name="Blot animation">
+            <div class="w500">
+                <h2>Blot animation</h2>
+                <div class="blot_animation"></div>
+            </div>
+        </section> <!-- end section -->
+    </main>
+
+    
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

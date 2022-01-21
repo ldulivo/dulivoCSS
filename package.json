@@ -1,0 +1,27 @@
+{
+  "name": "dulivocss",
+  "version": "1.0.0",
+  "description": "Styles CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass --watch assets/scss -o assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ldulivo/dulivoCSS.git"
+  },
+  "keywords": [
+    "css",
+    "sass"
+  ],
+  "author": "Leonardo Ariel D'Ulivo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ldulivo/dulivoCSS/issues"
+  },
+  "homepage": "https://github.com/ldulivo/dulivoCSS#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
