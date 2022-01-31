@@ -202,32 +202,42 @@
   100% {
     transform: rotate(0deg); } }
 
-.my_calendar ol {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  padding: 0; }
-
-.my_calendar .first_day_1 {
-  grid-column-start: 1; }
-
-.my_calendar .first_day_2 {
-  grid-column-start: 2; }
-
-.my_calendar .first_day_3 {
-  grid-column-start: 3; }
-
-.my_calendar .first_day_4 {
-  grid-column-start: 4; }
-
-.my_calendar .first_day_5 {
-  grid-column-start: 5; }
-
-.my_calendar .first_day_6 {
-  grid-column-start: 6; }
-
-.my_calendar .first_day_7 {
-  grid-column-start: 7; }
+.my_calendar {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  color: #000000; }
+  .my_calendar ol {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0; }
+  .my_calendar .weekday,
+  .my_calendar .day,
+  .my_calendar .not_day {
+    font-weight: 400;
+    display: flex;
+    justify-content: center; }
+  .my_calendar .weekday {
+    font-weight: bolder;
+    margin: 0 0 3px 0; }
+  .my_calendar .not_day {
+    font-weight: 100;
+    color: #bbbbbb; }
+  .my_calendar .first_day_0 {
+    grid-column-start: 1; }
+  .my_calendar .first_day_1 {
+    grid-column-start: 2; }
+  .my_calendar .first_day_2 {
+    grid-column-start: 3; }
+  .my_calendar .first_day_3 {
+    grid-column-start: 4; }
+  .my_calendar .first_day_4 {
+    grid-column-start: 5; }
+  .my_calendar .first_day_5 {
+    grid-column-start: 6; }
+  .my_calendar .first_day_6 {
+    grid-column-start: 7; }
 
 /*
 Remove code below this comment
