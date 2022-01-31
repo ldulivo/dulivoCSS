@@ -222,6 +222,144 @@
 
             </div>
         </section> <!-- end section -->
+        
+        <!-- Sectopm: Simple Spinner -->
+        <section id="simple_spinner" name="Simple spinner">
+            <h2>Simple Spinner</h2>
+            
+            <div class="wrap">
+                <div class="w500 flex-wrap">
+                    <h3>View effect</h3>
+                    <div class="content border wrap">
+
+                        <div class="simple_spinner">
+                        </div>
+
+                        <div class="simple_spinner_transparent">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="w500 flex-wrap code">
+                    <h3>Code</h3>
+<pre class="border">
+    .simple_spinner,
+    .simple_spinner_transparent {
+      border: 4px solid #0000001a;
+      border-right-color: #00aeff;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+    
+      animation: simple_spinner_spin 1s linear infinite;
+    }
+    
+    .simple_spinner_transparent {
+      border: 4px solid transparent;
+      border-right-color: #00aeff;
+    }
+    
+    @keyframes simple_spinner_spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+</pre>
+                </div>
+
+            </div>
+        </section> <!-- end section -->
+        
+        <!-- Sectopm: Simple Spinner -->
+        <section id="double_spinner" name="Double Spinner">
+            <h2>Double Spinner</h2>
+            
+            <div class="wrap">
+                <div class="w500 flex-wrap">
+                    <h3>View effect</h3>
+                    <div class="content border wrap">
+
+                        <div class="double_spinner">
+                        </div>
+
+                        <div class="double_spinner_transparent">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="w500 flex-wrap code">
+                    <h3>Code</h3>
+<pre class="border">
+    .double_spinner,
+    .double_spinner_transparent {
+      position: relative;
+      width: 58px;
+      height: 58px;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+      &::before {
+        content: "";
+        position: absolute;
+        border: 4px solid #0000001a;
+        border-right-color: #00aeff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    
+        animation: double_spinner_spin 5s linear infinite;
+      }
+    
+      &::after {
+        content: "";
+        position: absolute;
+        border: 4px solid #0000001a;
+        border-right-color: #00aeff;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+    
+        animation: double_spinner_spin_reverse 3s linear infinite;
+      }
+    }
+    
+    .double_spinner_transparent {
+      &::before,
+      &::after {
+        border: 4px solid transparent;
+        border-right-color: #00aeff;
+      }
+    }
+    
+    @keyframes double_spinner_spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes double_spinner_spin_reverse {
+      0% {
+        transform: rotate(360deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+</pre>
+                </div>
+
+            </div>
+        </section> <!-- end section -->
 
     </main>
 
