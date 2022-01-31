@@ -1,0 +1,14 @@
+.my_calendar {
+  ol {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0;
+  }
+
+  @for $i from 1 to 8 {
+    .first_day_#{$i} {
+      grid-column-start: $i;
+    }
+  }
+}
